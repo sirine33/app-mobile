@@ -3,4 +3,9 @@
     <string name="budget">Budget</string>
     <string name="button_text">Budget</string>
     <string name="button_text_transaction">Transaction</string>
+    <string name="addExpenseDescription">Add an expense transaction</string>
+    <string name="iconDescription">BudgetManager icon</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="noBudgets">You don\'t have any budgets at the moment. Click the "+" (plus) button up top to get started.\n\nBudget Watch lets you create budgets, then track spending during the month.</string>
+
 </resources>

@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name=".transaction"
-            android:label="transaction">
-
-        </activity>
-        <activity android:name=".budgets"
-            android:label="budgets"/>
+        <activity android:name=".slide4"></activity>
+        <activity android:name=".widget_layout"></activity>
+        <activity android:name=".budgets"></activity>
+        <activity
+            android:name=".transaction"
+            android:label="transaction" />
         <activity
             android:name=".MainActivity"
             android:label=""
