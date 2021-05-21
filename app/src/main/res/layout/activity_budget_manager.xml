@@ -1,34 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:backgroundTint="#1C1C1B"
+    android:backgroundTintMode="add"
+    android:foregroundTint="#FF9800"
+    android:textAlignment="viewEnd"
     tools:context=".budgetManager">
 
 
   <Button
       android:id="@+id/budgetButton"
       style="?android:attr/borderlessButtonStyle"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:drawableLeft="@drawable/purse"
+      android:layout_alignParentStart="true"
+      android:layout_marginTop="90dp"
+      android:backgroundTint="#FF9800"
+      android:drawableLeft="@drawable/ic_baseline_euro_24"
+      android:drawableTint="#FF9800"
+      android:drawableTintMode="multiply"
+      android:drawingCacheQuality="high"
       android:text="@string/button_text"
-      android:textColor="@color/black" />
+      android:textAlignment="textStart"
+      android:textColor="@android:color/holo_orange_dark"
+      android:textIsSelectable="false"
+      android:textSize="24sp"
+      android:textStyle="bold" />
 
   <Button
       android:id="@+id/transactionButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/button_text_transaction"
-
-      android:layout_marginTop="20dp"
-      android:layout_below="@+id/budgetButton"
-      android:drawableLeft="@drawable/transaction"
-      android:textColor="@color/black"
       style="?android:attr/borderlessButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/budgetButton"
+      android:layout_marginTop="20dp"
+      android:backgroundTint="#FF9800"
+      android:drawableLeft="@drawable/ic_outline_business_24"
+      android:drawableTint="#FF9800"
+
+      android:text="@string/button_text_transaction"
+      android:textAlignment="textStart"
+      android:textColor="@android:color/holo_orange_dark"
+      android:textIsSelectable="false"
+      android:textSize="24sp"
+      android:textStyle="bold"
+       />
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="74dp"
+      android:background="@android:color/holo_orange_dark"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
       />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:shadowColor="#272424"
+      android:text="Budget Watch"
+      android:textAlignment="center"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textColor="#1C1C1B"
+      android:textSize="32sp"
+      android:textStyle="bold" />
 
 </RelativeLayout>

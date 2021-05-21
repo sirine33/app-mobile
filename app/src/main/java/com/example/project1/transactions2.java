@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class budgets extends AppCompatActivity {
+public class transactions2 extends AppCompatActivity {
     TextView receiver_msg;
     public static ArrayList<String> data = new ArrayList<String>();
     ImageView imageView;
@@ -24,13 +24,13 @@ public class budgets extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_budgets);
+        setContentView(R.layout.activity_transactions2);
         Intent intent = getIntent();
         show = (ListView) findViewById(R.id.list1);
         String str = intent.getStringExtra("input");
         //    receiver_msg = (TextView)findViewById(R.id.received_value_id);
         if (str == null) {
-            Intent activity2Intent = new Intent(getApplicationContext(), slide4.class);
+            Intent activity2Intent = new Intent(getApplicationContext(), transactions.class);
             startActivity(activity2Intent);
 
         } else {
@@ -41,7 +41,7 @@ public class budgets extends AppCompatActivity {
             // and key must be same which is send by first activity
 
             data.add(str);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(budgets.this, android.R.layout.simple_list_item_1, data);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(transactions2.this, android.R.layout.simple_list_item_1, data);
             show.setAdapter(adapter);
 
             // display the string into textView
@@ -52,7 +52,7 @@ public class budgets extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("Button Clicked");
-                Intent activity2Intent = new Intent(getApplicationContext(), slide4.class);
+                Intent activity2Intent = new Intent(getApplicationContext(), transactions.class);
                 startActivity(activity2Intent);
             }
         });
@@ -60,7 +60,7 @@ public class budgets extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(budgets.this, budgetManager.class);
+                Intent intent = new Intent(transactions2.this, budgetManager.class);
                 startActivity(intent);
             }
         });

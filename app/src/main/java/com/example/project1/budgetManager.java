@@ -32,7 +32,7 @@ public class budgetManager extends AppCompatActivity {
         transactionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(budgetManager.this, transaction.class);
+                Intent intent = new Intent(budgetManager.this, transactions.class);
                 startActivity(intent);
             }
         });}}

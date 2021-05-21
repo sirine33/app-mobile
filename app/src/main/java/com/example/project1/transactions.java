@@ -22,7 +22,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class slide4 extends AppCompatActivity {
+public class transactions extends AppCompatActivity {
 
     public static ArrayList<String> data=new ArrayList<String>();
     ImageView imageView;
@@ -32,13 +32,13 @@ public class slide4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_slide4);
+        setContentView(R.layout.activity_transactions);
 
         imageView = findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener(){
-          @Override
+            @Override
             public void onClick(View v) {
-                Intent intent = new Intent(slide4.this, budgetManager.class);
+                Intent intent = new Intent(transactions.this, budgetManager.class);
                 startActivity(intent);
             }
         });
@@ -50,15 +50,15 @@ public class slide4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-input1= text1.getText().toString();
+                input1= text1.getText().toString();
                 if ( text1.getText().toString().trim().equals("")){
                     Toast.makeText(getApplicationContext(),"Name Field is Empty", Toast.LENGTH_LONG).show();}
-             else   if ( text2.getText().toString().trim().equals("")){
+                else   if ( text2.getText().toString().trim().equals("")){
                     Toast.makeText(getApplicationContext(),"Value Field is Empty", Toast.LENGTH_LONG).show();}
                 else {
                     //  Toast.makeText(getApplicationContext(), text1.getText().toString(), Toast.LENGTH_LONG).show();
                     text1.setText("");
-                    Intent intent = new Intent(getApplicationContext(), budgets.class);
+                    Intent intent = new Intent(getApplicationContext(), transactions2.class);
                     System.out.println(input1);
                     // now by putExtra method put the value in key, value pair
                     // key is message_key by this key we will receive the value, and put the string
@@ -74,14 +74,8 @@ input1= text1.getText().toString();
 
         });
     }   public void openslide5() {
-        Intent intent = new Intent(this, budgets.class);
+        Intent intent = new Intent(this, transactions2.class);
         intent.putExtra("text1",input1 );
         startActivity(intent);
     }
 }
-
-
-
-
-
-
