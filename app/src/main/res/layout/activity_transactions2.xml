@@ -62,6 +62,6 @@
         android:divider="@android:color/holo_orange_dark"
         android:dividerHeight="2dp"
         android:textColor="#FF9800" />
-</ListView>
+
 
     </RelativeLayout>

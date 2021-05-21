@@ -59,7 +59,7 @@ input1= text1.getText().toString();
                     //  Toast.makeText(getApplicationContext(), text1.getText().toString(), Toast.LENGTH_LONG).show();
                     text1.setText("");
                     Intent intent = new Intent(getApplicationContext(), budgets.class);
-                    System.out.println(input1);
+                    data.add(input1);
                     // now by putExtra method put the value in key, value pair
                     // key is message_key by this key we will receive the value, and put the string
 

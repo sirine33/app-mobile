@@ -20,6 +20,7 @@ public class budgets extends AppCompatActivity {
     ListView show;
 
 
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,10 @@ public class budgets extends AppCompatActivity {
         Intent intent = getIntent();
         show = (ListView) findViewById(R.id.list1);
         String str = intent.getStringExtra("input");
+     if(str != null){   data.add(str);}
+boolean ans = data.isEmpty();
         //    receiver_msg = (TextView)findViewById(R.id.received_value_id);
-        if (str == null) {
+        if (ans == true) {
             Intent activity2Intent = new Intent(getApplicationContext(), slide4.class);
             startActivity(activity2Intent);
 
@@ -60,7 +63,7 @@ public class budgets extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(budgets.this, budgetManager.class);
+                Intent intent = new Intent(getApplicationContext(), budgetManager.class);
                 startActivity(intent);
             }
         });
