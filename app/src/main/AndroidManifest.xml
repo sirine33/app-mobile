@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name=".slide4"></activity>
-        <activity android:name=".widget_layout"></activity>
-        <activity android:name=".budgets"></activity>
+        <activity android:name=".total"></activity>
+        <activity android:name=".addTransaction" />
+        <activity android:name=".slide4" />
+        <activity android:name=".widget_layout" />
+        <activity android:name=".budgets" />
         <activity
             android:name=".transaction"
             android:label="transaction" />
