@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name=".transactions2"></activity>
+        <activity
+            android:name=".total"
+            android:label="@string/title_activity_total"
+            android:theme="@style/Theme.Project1.NoActionBar"></activity>
+        <activity android:name=".transactions2" />
         <activity
             android:name=".transactions"
             android:label="@string/title_activity_transactions"
