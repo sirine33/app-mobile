@@ -50,6 +50,25 @@
       android:textStyle="bold"
        />
 
+  <Button
+      android:id="@+id/totalButton"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/transactionButton"
+      android:layout_marginTop="20dp"
+      android:backgroundTint="#FF9800"
+      android:drawableLeft="@drawable/ic_exposure"
+      android:drawableTint="#FF9800"
+      android:text="Total"
+      android:textAlignment="textStart"
+      android:textColor="@android:color/holo_orange_dark"
+      android:textIsSelectable="false"
+      android:textSize="24sp"
+      android:textStyle="bold"
+       />
+
   <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
       android:layout_width="match_parent"

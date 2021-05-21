@@ -22,6 +22,7 @@ public class budgetManager extends AppCompatActivity {
     public void initEvent() {
         Button budgetButton = findViewById(R.id.budgetButton);
         Button transactionButton = findViewById(R.id.transactionButton);
+        Button totalButton = findViewById(R.id.totalButton);
         budgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,4 +36,12 @@ public class budgetManager extends AppCompatActivity {
                 Intent intent = new Intent(budgetManager.this, transactions.class);
                 startActivity(intent);
             }
-        });}}
+        });
+        totalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(budgetManager.this, total.class);
+                startActivity(intent);
+            }
+        });
+    }}
