@@ -1,5 +1,7 @@
 package com.example.project1;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,9 +39,28 @@ public class transaction extends AppCompatActivity {
         show = (ListView) findViewById(R.id.list1);
         String str = intent.getStringExtra("input");
         String str2 = intent.getStringExtra("input2");
-        if (str == null) {
-            Intent activity2Intent = new Intent(getApplicationContext(), addTransaction.class);
-            startActivity(activity2Intent);
+        if(str != null){   data.add(str); }
+
+        boolean ans = data.isEmpty();
+        //    receiver_msg = (TextView)findViewById(R.id.received_value_id);
+        if (ans == true) {
+            new AlertDialog.Builder(this)
+                    .setTitle("add transaction")
+                    .setMessage("you got no transaction !! , would you like to add now ?")
+
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(transaction.this, addTransaction.class);
+                            startActivity(intent);
+                        }
+                    })
+
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setNegativeButton(android.R.string.no, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         } else {
             String both= "name="+str + "// value=" + str2;
@@ -48,7 +69,7 @@ public class transaction extends AppCompatActivity {
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(transaction.this, android.R.layout.simple_list_item_1, data);
             show.setAdapter(adapter);
-
+            System.out.println(data);
 
         }
 
